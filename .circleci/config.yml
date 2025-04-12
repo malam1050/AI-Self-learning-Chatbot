@@ -13,6 +13,9 @@ jobs:
           name: Grant execute permission for Gradlew
           command: chmod +x ./gradlew
       - run:
+          name: List files
+          command: ls -la
+      - run:
           name: Build Android App
           command: ./gradlew assembleDebug
       - store_artifacts:
